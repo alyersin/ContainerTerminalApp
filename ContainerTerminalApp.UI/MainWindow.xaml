@@ -55,8 +55,8 @@
                     </MenuItem>
 
                     <MenuItem Header="_Vessel" Margin="6 0 0 0">
-                        <MenuItem Header="Status"/>
-                        <MenuItem Header="Inspector"/>
+                        <MenuItem Header="Vesel Visits"/>
+                        <MenuItem Header="Bookings"/>
                         <MenuItem Header="Operations"/>
                         <MenuItem Header="Schedule"/>
                     </MenuItem>
