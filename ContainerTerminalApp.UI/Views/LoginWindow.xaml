@@ -5,26 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ContainerTerminalApp.UI.Views"
         mc:Ignorable="d"
-        Title="Container Terminal Login" Height="470" Width="580"
-        WindowStartupLocation="CenterScreen"
-        >
+        Title="Container Terminal Login"
+        Height="470"
+        Width="580"
+        WindowStartupLocation="CenterScreen">
 
-    <Window.Background>
-        <ImageBrush ImageSource="/Assets/login_window_bg.jpg"/>
-    </Window.Background>
-    
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Window.Background>
+                <ImageBrush ImageSource="/Assets/login_window_bg.jpg"/>
+        </Window.Background>
 
-       
-        <StackPanel Margin="0 2" Orientation="Horizontal">
-            <TextBlock FontWeight="Bold"  Width="70" Height="18" Foreground="White" VerticalAlignment="Center">Username</TextBlock>
-            <TextBox Padding="1 1 1 1"  Width="180" Height="20" Text="dsadsa"/>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+                <StackPanel Margin="0 2"
+                            Orientation="Horizontal">
+                        <TextBlock FontWeight="Bold"
+                                   Width="70"
+                                   Height="18"
+                                   Foreground="White"
+                                   VerticalAlignment="Center">Username</TextBlock>
+                        <TextBox x:Name="UsernameBox"
+                                 Padding="1 1 1 1"
+                                 Width="180"
+                                 Height="20"/>
+                </StackPanel>
+
+                <StackPanel Margin="0 2"
+                            Orientation="Horizontal">
+                        <TextBlock FontWeight="Bold"
+                                   Width="70"
+                                   Height="18"
+                                   Foreground="White"
+                                   VerticalAlignment="Center">Password</TextBlock>
+                        <PasswordBox x:Name="PasswordBox"
+                                     Padding="1 1 1 1"
+                                     Width="180"
+                                     Height="20"
+                                     Password=""/>
+                </StackPanel>
+                <Button Click="LoginBtn_Click"
+                        Margin="0 6 0 0"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Right"
+                        Width="50">Login</Button>
         </StackPanel>
-
-        <StackPanel Margin="0 2" Orientation="Horizontal">
-            <TextBlock FontWeight="Bold" Width="70" Height="18"  Foreground="White" VerticalAlignment="Center">Password</TextBlock>
-            <PasswordBox x:Name="PasswordBox" Padding="1 1 1 1" Width="180" Height="20" Password=""></PasswordBox>
-        </StackPanel>
-        <Button Margin="0 6 0 0" FontWeight="Bold" HorizontalAlignment="Right" Width="50">Login</Button>
-    </StackPanel>
 </Window>

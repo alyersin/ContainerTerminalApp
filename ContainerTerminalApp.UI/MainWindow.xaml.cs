@@ -19,5 +19,15 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        string date = DateTime.Now.ToString("d.M.yy");
+        this.Title = $"Container Terminal App - {date}.developer build";
+    }
+
+
+
+
+    private void UnitsTab_Loaded(object sender, RoutedEventArgs e)
+    {
+
     }
 }

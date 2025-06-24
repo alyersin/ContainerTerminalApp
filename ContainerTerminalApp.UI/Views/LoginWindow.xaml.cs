@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContainerTerminalApp.UI.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,28 @@ namespace ContainerTerminalApp.UI.Views
         {
             InitializeComponent();
         }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string dbUsername = UsernameBox.Text;
+            string dbPassword = PasswordBox.Password;
+
+            try
+            {
+                using var conn = DB_Service.GetConnection(dbUsername, dbPassword);
+                //MessageBox.Show("Connected to the DB", "Connected", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to connect: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
 
 
     }
